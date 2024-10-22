@@ -1,0 +1,744 @@
+/* main.css */
+:root {
+    --background-color: #111;
+    --nav-background: #222;
+    --text-color: #fff;
+    --button-color: #007bff;
+    --button-hover: #0056b3;
+    --address-background: #333;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--background-color);
+    font-family: 'mainFont', sans-serif;
+    color: var(--text-color);
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--nav-background);
+  }
+  
+  .nav-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-buttons button {
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #444;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-buttons button:hover {
+    background-color: #555;
+  }
+  
+  .icon-button {
+    background-color: transparent !important;
+    padding: 0.5rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-button:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  
+  .icon-button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+  
+  .icon-button:last-child svg {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 5rem;
+  }
+  
+  .right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-size: 6em;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    animation: fadeInLeft 1.5s ease forwards;
+  }
+  
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeInLeft 1.5s ease 0.3s forwards;
+  }
+  
+  .button-address-container {
+    display: flex;
+    align-items: flex-start; 
+    gap: 1rem;
+    opacity: 0;
+    animation: fadeInLeft 1.5s ease 0.6s forwards;
+  }
+  
+  .button-address-container button {
+    padding: 0.8rem 2rem;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+  }
+  
+  .button-address-container button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 123, 255, 0.4);
+  }
+  
+  .address {
+    padding: 1.1rem 1rem;
+    background-color: var(--address-background);
+    border-radius: 40px;
+    font-size: 1.2em;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .address {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .address:hover {
+    background-color: #444;
+  }
+  
+  .address::after {
+    content: "Click to copy";
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+  
+  .address:hover::after {
+    opacity: 1;
+  }
+  
+  .address.copied::after {
+    content: "Copied!";
+    background-color: #28a745;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 550px;
+    height: 550px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0;
+    animation: fadeInRight 1.5s ease forwards;
+  }
+  
+  .lottie-overlay {
+    position: absolute;
+    top: 240px;
+    left: 20px;
+    width: 40%;
+    height: 40%;
+    pointer-events: none;
+  }
+  
+  .about-section {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--nav-background);
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    overflow: hidden; /* Add this */
+  }
+  
+  .about-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    max-width: 1200px; /* Add this */
+    margin: 0 auto; /* Add this */
+    padding: 2rem 0; /* Add this */
+  }
+  
+  .about-section h2 {
+    font-size: 4em;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    opacity: 1; /* Add this */
+  }
+  
+  .about-image {
+    flex: 1;
+    opacity: 1; /* Add this */
+  }
+  
+  .about-image img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Add this */
+    margin: 0 auto; /* Add this */
+  }
+  
+  .about-text {
+    flex: 1;
+    color: var(--text-color);
+    opacity: 1; /* Add this */
+  }
+  
+  .about-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 1; /* Add this */
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform; /* Add this */
+  }
+  
+  .fade-in.visible {
+    opacity: 1 !important; /* Add !important */
+    transform: translateY(0) !important; /* Add !important */
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .constant-smoke {
+    position: relative;
+    color: var(--text-color);
+    display: inline-block;
+  }
+  
+  .constant-smoke::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    color: rgba(255, 255, 255, 0.3);
+    filter: blur(9px);
+    animation: smoke 8s infinite;
+  }
+  
+  @keyframes smoke {
+    0% {
+      transform: translate(0, 0) scale(1);
+      opacity: 0;
+    }
+    20% {
+      transform: translate(10px, -20px) scale(1.1); /* Changed from (5px, -5px) to (10px, -20px) */
+      opacity: 0.5;
+    }
+    40% {
+      transform: translate(20px, -40px) scale(1.2); /* Changed from (10px, -10px) to (20px, -40px) */
+      opacity: 0.8;
+    }
+    60% {
+      transform: translate(30px, -60px) scale(1.3); /* Changed from (15px, -15px) to (30px, -60px) */
+      opacity: 0.4;
+    }
+    80% {
+      transform: translate(40px, -80px) scale(1.4); /* Changed from (20px, -20px) to (40px, -80px) */
+      opacity: 0.2;
+    }
+    100% {
+      transform: translate(50px, -100px) scale(1.5); /* Changed from (25px, -25px) to (50px, -100px) */
+      opacity: 0;
+    }
+  }
+  
+  
+  /* Ensure the original text remains visible */
+  h1.constant-smoke {
+    position: relative;
+    z-index: 1;
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+  
+    .left-side {
+      padding-left: 2rem;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .button-address-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-container {
+      width: 100%;
+      height: auto;
+      max-width: 550px;
+      aspect-ratio: 1 / 1;
+    }
+  
+    .about-content {
+      flex-direction: column;
+      gap: 2rem;
+      padding: 1rem;
+    }
+  
+    .about-section h2 {
+      font-size: 3em;
+    }
+  }
+
+  .chatbot-section {
+    min-height: 100vh;
+    background-color: var(--background-color);
+    padding: 5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+    overflow: hidden;
+  }
+  
+  .chatbot-section h2 {
+    font-size: 4em;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .wallet-connect {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .wallet-connect p {
+    color: var(--text-color);
+    font-size: 1.2em;
+    text-align: center;
+  }
+  
+  .connect-button, .buy-token-button {
+    padding: 1rem 2rem;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+  }
+  
+  .connect-button:hover, .buy-token-button:hover {
+    background-color: var(--button-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 123, 255, 0.4);
+  }
+  
+  .chat-container {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  
+  .chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .message {
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+  }
+  
+  .message.user {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    align-self: flex-end;
+  }
+  
+  .message.ai {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    align-self: flex-start;
+  }
+  
+  .chat-input {
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .chat-input input {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-color);
+    font-size: 1em;
+  }
+  
+  .chat-input input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--button-color);
+  }
+  
+  .chat-input button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .chat-input button:hover {
+    background-color: var(--button-hover);
+  }
+  
+  @media (max-width: 768px) {
+    .chat-container {
+      height: 500px;
+    }
+  
+    .message {
+      max-width: 85%;
+    }
+  
+    .chatbot-section h2 {
+      font-size: 3em;
+    }
+  }
+
+.wallet-address {
+    font-family: monospace;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+  }
+  
+  .wallet-connect p {
+    word-break: break-all;
+  }
+
+  .message {
+    padding: 1rem;
+    border-radius: 10px;
+    max-width: 70%;
+    word-wrap: break-word;
+    animation: messagePopIn 0.3s ease-out;
+    position: relative;
+  }
+  
+  .message.user {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  
+  .message.ai {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+    /* Add a subtle glow effect */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.1);
+  }
+  
+  /* Add animation for new messages */
+  @keyframes messagePopIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Style scrollbar for chat messages */
+  .chat-messages::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .chat-messages::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+  }
+  
+  .chat-messages::-webkit-scrollbar-thumb {
+    background: var(--button-color);
+    border-radius: 4px;
+  }
+  
+  .chat-messages::-webkit-scrollbar-thumb:hover {
+    background: var(--button-hover);
+  }
+
+
+  
+  .falling-buds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden; /* Add this to contain buds */
+
+  }
+  
+  .bud {
+    position: absolute;
+    top: -100px;
+    animation: fall linear infinite;
+    opacity: 0.6;
+    --rotation: 0deg;  /* New: for sway calculation */
+    /* Added sway animation */
+    animation: fall linear infinite, sway 6s ease-in-out infinite;
+  }
+  
+ /* Bud image styling */
+ .bud img {
+  transform-origin: center center;
+  width: 25px;
+  height: 25px;
+  /* Remove white background */
+  filter: brightness(1.2) contrast(1.2) drop-shadow(0 0 5px rgba(255, 255, 255, 0.1));
+  mix-blend-mode: screen; /* This helps blend with dark backgrounds */
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+ 
+  
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;  /* Increased from 0.6 */
+  }
+  70% {  /* New keyframe for longer visible duration */
+    opacity: 0.7;
+    transform: translateY(130vh) translateX(calc(sin(var(--rotation)) * 50px));
+  }
+  100% {
+    transform: translateY(150vh) translateX(calc(sin(var(--rotation)) * 100px));
+    opacity: 0;
+  }
+}
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes sway {
+    0%, 100% {
+      margin-left: 0;
+    }
+    50% {
+      margin-left: 30px;
+    }
+  }
+  
+  /* Make sure chat elements stay above the falling buds */
+  .wallet-connect, .chat-container, .chatbot-section h2 {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Optional: Add a subtle gradient overlay to enhance visibility */
+  .chatbot-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wallet-connect, 
+  .chat-container, 
+  .chatbot-section h2 {
+    position: relative;
+    z-index: 1;
+  }
+
+  .pulse-button {
+    margin-top: 11px;
+    background-color: #007bff;
+    color: white;
+    padding: 0.3rem 1.4rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    animation: pulse 1.2s infinite;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    font-weight: bold;
+    transition: all 0.2s ease;
+    font-size: 1.7rem;
+  }
+  
+  .pulse-button:hover {
+    transform: scale(1.05);
+    background-color: #0056b3;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+    }
+  }
+  
+  .nav-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
