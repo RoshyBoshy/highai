@@ -11,7 +11,7 @@
     // Ensure globals are available
     window.global = window;
     window.global.TYPED_ARRAY_SUPPORT = true;
-    window.process = { env: { NODE_ENV: 'development' } };
+    window.process = { env: { NODE_ENV: 'production' } };
   </script>
   <!-- Fix these paths by removing "public" -->
   <script defer src="/build/bundle.js"></script>
