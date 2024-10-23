@@ -43,7 +43,7 @@ export default {
       }
     }),
 
-    css({ output: 'bundle.css' }),
+    css({ output: 'public/build/bundle.css' }),
 
     resolve({
       browser: true,
