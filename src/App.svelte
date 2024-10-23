@@ -320,6 +320,8 @@
 		</div>
 	  
 	  <h2 class="fade-in">AI Chatbot</h2>
+	  <h3 class="fade-in">Type a message below but dont expect the answer to make too much sense...🍃😵‍💫</h3>
+
 	  
 		<div class="chat-container">
 		  <div class="chat-messages">
