@@ -1,4 +1,6 @@
 <script>
+    import FallingBuds from './BudEffects/FallingBuds.svelte';
+
     function handleBuySell() {
       window.open('https://pump.fun', '_blank');
     }
@@ -27,6 +29,8 @@
   </script>
   
   <nav>
+    <FallingBuds />
+
     <div class="nav-logo">MY HIGH AI</div>
     <div class="nav-center">
       <button class="pulse-button" on:click={scrollToChatbot}>NEW! AI CHATBOT!🤖</button>
