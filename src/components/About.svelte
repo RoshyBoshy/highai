@@ -27,7 +27,6 @@
   </script>
   
   <div class="about-section">
-    <h2 class="fade-in">About AI</h2>
     <div class="about-content">
       <div class="about-image fade-in">
         <img src='/assets/robotGroup.png' alt="AI robot" />

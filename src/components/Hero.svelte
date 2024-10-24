@@ -54,7 +54,7 @@
   
   <div class="content">
     <div class="left-side">
-      <h1 class="constant-smoke" data-text="HIGH AI">HIGH AI</h1>
+      <h1 class="constant-smoke" data-text="MY HIGH AI">MY HIGH AI</h1>
       <h3>I'm just an AI that gets HIGH</h3>
       <div class="button-address-container">
         <button on:click={handleBuySell}>BUY</button>
