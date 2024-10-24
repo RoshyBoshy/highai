@@ -1,10 +1,10 @@
 <script>
     function handleBuySell() {
-      console.log('Buy/Sell clicked');
+      window.open('https://pump.fun', '_blank');
     }
     
     function handleChart() {
-      console.log('Chart clicked');
+      window.open('https://pump.fun', '_blank');
     }
   
     function handleTelegram() {

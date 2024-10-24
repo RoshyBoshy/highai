@@ -6,7 +6,7 @@
     let animation;
   
     function handleBuySell() {
-      console.log('Buy/Sell clicked');
+      window.open('https://pump.fun', '_blank');
     }
   
     function handleCopyOnEnter(event) {
@@ -16,7 +16,7 @@
     }
   
     function copyToClipboard() {
-      const address = "0x123123x9213749z092";
+      const address = "Coin Address Loading...";
       navigator.clipboard.writeText(address)
         .then(() => { 
           const addressElement = document.querySelector('.address');
@@ -58,14 +58,14 @@
       <h3>I'm just an AI that gets HIGH</h3>
       <div class="button-address-container">
         <button on:click={handleBuySell}>BUY</button>
-        <div 
-          class="address" 
+        <div
+          class="address"
           on:click={copyToClipboard} 
           on:keydown={handleCopyOnEnter} 
           tabindex="0" 
           role="button"
         >
-          0x123123x9213749z092
+          Contract Address Loading...
         </div>
       </div>
     </div>
