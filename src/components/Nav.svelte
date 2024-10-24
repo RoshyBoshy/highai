@@ -29,7 +29,7 @@
   <nav>
     <div class="nav-logo">MY HIGH AI</div>
     <div class="nav-center">
-      <button class="pulse-button" on:click={scrollToChatbot}>NEW! AI CHATBOT</button>
+      <button class="pulse-button" on:click={scrollToChatbot}>NEW! AI CHATBOT!🤖</button>
     </div>
     <div class="nav-buttons">
       <button on:click={handleBuySell}>BUY $HIGH AI</button>
