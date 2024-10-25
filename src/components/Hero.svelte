@@ -16,7 +16,7 @@
     }
   
     function copyToClipboard() {
-      const address = "Coin Address Loading...";
+      const address = "ESEh6CNtSKT2JFaTjZMdfgQMR1vNitefpgqqHFGtpump";
       navigator.clipboard.writeText(address)
         .then(() => { 
           const addressElement = document.querySelector('.address');
