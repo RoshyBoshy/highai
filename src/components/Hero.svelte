@@ -6,7 +6,7 @@
     let animation;
   
     function handleBuySell() {
-      window.open('https://pump.fun/ESEh6CNtSKT2JFaTjZMdfgQMR1vNitefpgqqHFGtpump', '_blank');
+      window.open('https://pump.fun/', '_blank');
     }
   
     function handleCopyOnEnter(event) {
@@ -16,7 +16,7 @@
     }
   
     function copyToClipboard() {
-      const address = "ESEh6CNtSKT2JFaTjZMdfgQMR1vNitefpgqqHFGtpump";
+      const address = "address loading...";
       navigator.clipboard.writeText(address)
         .then(() => { 
           const addressElement = document.querySelector('.address');
@@ -65,7 +65,7 @@
           tabindex="0" 
           role="button"
         >
-        ESEh6CNtSKT2JFaTjZMdfgQMR1vNitefpgqqHFGtpump
+        address loading...
         </div>
       </div>
     </div>

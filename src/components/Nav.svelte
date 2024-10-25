@@ -2,11 +2,11 @@
     import FallingBuds from './BudEffects/FallingBuds.svelte';
 
     function handleBuySell() {
-      window.open('https://pump.fun/ESEh6CNtSKT2JFaTjZMdfgQMR1vNitefpgqqHFGtpump', '_blank');
+      window.open('https://pump.fun/', '_blank');
     }
     
     function handleChart() {
-      window.open('https://pump.fun/ESEh6CNtSKT2JFaTjZMdfgQMR1vNitefpgqqHFGtpump', '_blank');
+      window.open('https://pump.fun/', '_blank');
     }
   
     function handleTelegram() {
