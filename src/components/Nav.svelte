@@ -36,7 +36,7 @@
       <button class="pulse-button" on:click={scrollToChatbot}>NEW! AI CHATBOT!🤖</button>
     </div>
     <div class="nav-buttons">
-      <button on:click={handleBuySell}>BUY $HIGH AI</button>
+      <button on:click={handleBuySell}>BUY $HIGHAI</button>
       <button on:click={handleChart}>CHART</button>
       <button on:click={handleTelegram} class="icon-button">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
