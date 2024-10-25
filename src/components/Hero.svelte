@@ -6,7 +6,7 @@
     let animation;
   
     function handleBuySell() {
-      window.open('https://pump.fun', '_blank');
+      window.open('https://pump.fun/ESEh6CNtSKT2JFaTjZMdfgQMR1vNitefpgqqHFGtpump', '_blank');
     }
   
     function handleCopyOnEnter(event) {
@@ -65,7 +65,7 @@
           tabindex="0" 
           role="button"
         >
-          Contract Address Loading...
+        ESEh6CNtSKT2JFaTjZMdfgQMR1vNitefpgqqHFGtpump
         </div>
       </div>
     </div>
